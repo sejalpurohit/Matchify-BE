@@ -13,9 +13,11 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const user = new User({
-    name: req.body.name,
-    username: req.body.username,
-    age: req.body.age,
+    spotifyId: req.body.spotifyId,
+    displayName: req.body.displayName,
+    email: req.body.email,
+    profileImage: req.body.profileImage,
+    profileSongs: req.body.profileSongs,
   });
 
   try {
