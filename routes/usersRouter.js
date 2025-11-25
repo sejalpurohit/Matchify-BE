@@ -7,25 +7,23 @@ router.get("/", async (req, res) => {
     const users = await User.find();
     res.json(users);
   } catch (err) {
-    res.status(500).json({message: err.message})
+    res.status(500).json({ message: err.message });
   }
 });
 
-router.post('/', async (req, res) => {
-    const user = new User({
-        name: req.body.name,
-        username: req.body.username,
-        age: req.body.age,
-    });
+router.post("/", async (req, res) => {
+  const user = new User({
+    name: req.body.name,
+    username: req.body.username,
+    age: req.body.age,
+  });
 
-    try {
-        const newUser = await user.save();
-        res.status(201).json(newUser);
-    }
-        catch (err) {
-            res.status(400).json({message: err.message})
-        }
-    }
-)
+  try {
+    const newUser = await user.save();
+    res.status(201).json(newUser);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
 
 module.exports = router;
