@@ -5,7 +5,7 @@ const trackSchema = new mongoose.Schema({
   trackName: { type: String, required: true },
   artistName: { type: String, required: true },
   albumArt: { type: String, required: true },
-  previewUrl: { type: String, required: true }
+  previewUrl: { type: String, required: true },
 });
 
 const userSchema = new mongoose.Schema({
@@ -13,7 +13,10 @@ const userSchema = new mongoose.Schema({
   displayName: { type: String, required: true },
   email: { type: String, required: true },
   profileImage: { type: String, required: true },
-  profileSongs: [trackSchema]
+  profileSongs: [trackSchema],
+  matches: [String],
+  liked: [String],
+  passed: [String],
 });
 
 module.exports = mongoose.model("User", userSchema);
