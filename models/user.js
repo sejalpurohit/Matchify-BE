@@ -14,6 +14,7 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true },
   profileImage: { type: String, required: true },
   profileSongs: [trackSchema],
+  genres: { type: [String], required: true },
   matches: [String],
   liked: [String],
   passed: [String],
