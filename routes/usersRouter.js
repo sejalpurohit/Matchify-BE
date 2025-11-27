@@ -14,12 +14,24 @@ router.get("/", async (req, res) => {
 
 router.get("/feed", async (req, res) => {
   const selfGenres = req.body.genres;
+  console.log(selfGenres);
   try {
-    const users = await User.find();
+    let users = await User.find();
 
-    for (const user of users) {
-      computeCompatibility(selfGenres, user.genres)
-    }
+    users = users.map((user) => {
+      const userObj = user.toObject();
+      userObj.compatibility = computeCompatibility(selfGenres, user.genres);
+      return userObj;
+    });
+
+    // for (const user of users) {
+    //   //console.log(computeCompatibility(selfGenres, user.genres))
+
+    //   user.compatibility = computeCompatibility(selfGenres, user.genres);
+    //   // console.log(user)
+    //}
+
+    users.sort((a, b) => b.compatibility - a.compatibility);
 
     res.json(users);
   } catch (err) {
