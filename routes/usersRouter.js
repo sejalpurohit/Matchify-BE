@@ -12,9 +12,8 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/feed", async (req, res) => {
+router.put("/feed", async (req, res) => {
   const selfGenres = req.body.genres;
-  console.log(selfGenres);
   try {
     let users = await User.find();
 
@@ -23,13 +22,6 @@ router.get("/feed", async (req, res) => {
       userObj.compatibility = computeCompatibility(selfGenres, user.genres);
       return userObj;
     });
-
-    // for (const user of users) {
-    //   //console.log(computeCompatibility(selfGenres, user.genres))
-
-    //   user.compatibility = computeCompatibility(selfGenres, user.genres);
-    //   // console.log(user)
-    //}
 
     users.sort((a, b) => b.compatibility - a.compatibility);
 
