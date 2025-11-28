@@ -15,10 +15,9 @@ router.get("/", async (req, res) => {
 router.put("/feed", async (req, res) => {
   const selfGenres = req.body.genres;
   try {
-    let users = await User.find();
-
-    users = users.map((user) => {
+    const users = (await User.find()).map((user) => {
       const userObj = user.toObject();
+      delete userObj.email;
       userObj.compatibility = computeCompatibility(selfGenres, user.genres);
       return userObj;
     });
