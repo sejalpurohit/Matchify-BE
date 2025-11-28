@@ -14,6 +14,7 @@ router.get("/", async (req, res) => {
 
 router.put("/feed", async (req, res) => {
   const selfGenres = req.body.genres;
+  const userSpotifyId = req.body.spotifyId;
   try {
     const users = (await User.find()).map((user) => {
       const userObj = user.toObject();
@@ -22,9 +23,32 @@ router.put("/feed", async (req, res) => {
       return userObj;
     });
 
-    users.sort((a, b) => b.compatibility - a.compatibility);
+    const filteredUsers = users.filter(
+      (user) => user.spotifyId !== userSpotifyId
+    );
 
-    res.json(users);
+    filteredUsers.sort((a, b) => b.compatibility - a.compatibility);
+
+    res.json(filteredUsers);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+router.put("/matches", async (req, res) => {
+  const userSpotifyId = req.body.spotifyId;
+
+  try {
+    const [{ matches }] = await User.find(
+      { spotifyId: userSpotifyId },
+      "matches"
+    ).exec();
+    const matchedUsers = await Promise.all(
+      matches.map((matchedUser) => {
+        return User.find({ spotifyId: matchedUser });
+      })
+    );
+    res.json(matchedUsers);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
