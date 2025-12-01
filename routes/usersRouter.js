@@ -61,7 +61,7 @@ router.patch("/matches", async (req, res) => {
     }
     const updatedUser = await user.save();
     const updatedOther = await other.save();
-    res.json({ updatedUser, updatedOther });
+    res.json(updatedUser);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
