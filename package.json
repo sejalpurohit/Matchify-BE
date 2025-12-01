@@ -13,7 +13,7 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "listen.js",
   "scripts": {
     "test": "jest",
     "dev": "nodemon listen.js",
