@@ -77,7 +77,7 @@ router.put("/matches", async (req, res) => {
     ).exec();
     const matchedUsers = await Promise.all(
       matches.map((matchedUser) => {
-        return User.find({ spotifyId: matchedUser });
+        return User.findOne({ spotifyId: matchedUser });
       })
     );
     res.json(matchedUsers);
@@ -87,29 +87,54 @@ router.put("/matches", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const user = new User({
-    spotifyId: req.body.spotifyId,
-    displayName: req.body.displayName,
-    email: req.body.email,
-    profileImage: req.body.profileImage,
-    profileSongs: req.body.profileSongs,
-    genres: req.body.genres,
-    matches: req.body.matches,
-    liked: req.body.liked,
-    passed: req.body.passed,
-  });
+  const updateUser = await User.findOne({ spotifyId: req.body.spotifyId });
+  if (updateUser) {
+    updateUser.displayName = req.body.displayName;
+    updateUser.email = req.body.email;
+    updateUser.profileImage = req.body.profileImage;
+    updateUser.genres = req.body.genres;
+    try {
+      const updatedUser = await updateUser.save();
+      res.status(200).json(updatedUser);
+    } catch (err) {
+      res.status(400).json({ message: err.message });
+    }
+  } else {
+    const user = new User({
+      spotifyId: req.body.spotifyId,
+      displayName: req.body.displayName,
+      email: req.body.email,
+      profileImage: req.body.profileImage,
+      profileSongs: req.body.profileSongs,
+      genres: req.body.genres,
+      matches: req.body.matches,
+      liked: req.body.liked,
+      passed: req.body.passed,
+    });
 
-  try {
-    const newUser = await user.save();
-    res.status(201).json(newUser);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
+    try {
+      const newUser = await user.save();
+      res.status(201).json(newUser);
+    } catch (err) {
+      res.status(400).json({ message: err.message });
+    }
   }
 });
 
-// router.patch("/", async (req, res) => {
-//   const userData = req.body.user;
+router.patch("/", async (req, res) => {
+  const spotifyId = req.body.spotifyId;
+  const genres = req.body.genres;
+  const profileSongs = req.body.profileSongs;
 
-// })
+  try {
+    const user = await User.findOne({ spotifyId: spotifyId });
+    user.genres = genres;
+    user.profileSongs = profileSongs;
+    const updatedUser = await user.save();
+    res.status(200).json(updatedUser);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
 
 module.exports = router;
