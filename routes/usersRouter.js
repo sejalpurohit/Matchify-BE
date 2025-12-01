@@ -87,6 +87,7 @@ router.put("/matches", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
+  console.log(req.body);
   const updateUser = await User.findOne({ spotifyId: req.body.spotifyId });
   if (updateUser) {
     updateUser.displayName = req.body.displayName;

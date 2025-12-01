@@ -5,7 +5,6 @@ const trackSchema = new mongoose.Schema({
   trackName: { type: String, required: true },
   artistName: { type: String, required: true },
   albumArt: { type: String, required: true },
-  previewUrl: { type: String, required: true },
 });
 
 const userSchema = new mongoose.Schema({
