@@ -23,13 +23,45 @@ router.put("/feed", async (req, res) => {
       return userObj;
     });
 
-    const filteredUsers = users.filter(
-      (user) => user.spotifyId !== userSpotifyId
-    );
+    const filteredUsers = users.filter((user) => {
+      return (
+        user.spotifyId !== userSpotifyId &&
+        !user.matches.includes(userSpotifyId) &&
+        !user.liked.includes(userSpotifyId) &&
+        !user.passed.includes(userSpotifyId)
+      );
+    });
 
     filteredUsers.sort((a, b) => b.compatibility - a.compatibility);
 
     res.json(filteredUsers);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+router.patch("/matches", async (req, res) => {
+  const userId = req.body.spotifyId;
+  const otherId = req.body.otherSpotifyId;
+  const isLike = req.body.isLike;
+
+  try {
+    const user = await User.findOne({ spotifyId: userId });
+    const other = await User.findOne({ spotifyId: otherId });
+    if (isLike) {
+      if (other.liked.includes(user.spotifyId)) {
+        user.matches.push(other.spotifyId);
+        other.matches.push(user.spotifyId);
+        other.liked = other.liked.filter((id) => id != user.spotifyId);
+      } else {
+        user.liked.push(other.spotifyId);
+      }
+    } else if (isLike === false) {
+      user.passed.push(other.spotifyId);
+    }
+    const updatedUser = await user.save();
+    const updatedOther = await other.save();
+    res.json(updatedUser);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -45,7 +77,7 @@ router.put("/matches", async (req, res) => {
     ).exec();
     const matchedUsers = await Promise.all(
       matches.map((matchedUser) => {
-        return User.find({ spotifyId: matchedUser });
+        return User.findOne({ spotifyId: matchedUser });
       })
     );
     res.json(matchedUsers);
@@ -55,23 +87,53 @@ router.put("/matches", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const user = new User({
-    spotifyId: req.body.spotifyId,
-    displayName: req.body.displayName,
-    email: req.body.email,
-    profileImage: req.body.profileImage,
-    profileSongs: req.body.profileSongs,
-    genres: req.body.genres,
-    matches: req.body.matches,
-    liked: req.body.liked,
-    passed: req.body.passed,
-  });
+  const updateUser = await User.findOne({ spotifyId: req.body.spotifyId });
+  if (updateUser) {
+    updateUser.displayName = req.body.displayName;
+    updateUser.email = req.body.email;
+    updateUser.profileImage = req.body.profileImage;
+    updateUser.genres = req.body.genres;
+    try {
+      const updatedUser = await updateUser.save();
+      res.status(200).json(updatedUser);
+    } catch (err) {
+      res.status(400).json({ message: err.message });
+    }
+  } else {
+    const user = new User({
+      spotifyId: req.body.spotifyId,
+      displayName: req.body.displayName,
+      email: req.body.email,
+      profileImage: req.body.profileImage,
+      profileSongs: req.body.profileSongs,
+      genres: req.body.genres,
+      matches: req.body.matches,
+      liked: req.body.liked,
+      passed: req.body.passed,
+    });
+
+    try {
+      const newUser = await user.save();
+      res.status(201).json(newUser);
+    } catch (err) {
+      res.status(400).json({ message: err.message });
+    }
+  }
+});
+
+router.patch("/", async (req, res) => {
+  const spotifyId = req.body.spotifyId;
+  const genres = req.body.genres;
+  const profileSongs = req.body.profileSongs;
 
   try {
-    const newUser = await user.save();
-    res.status(201).json(newUser);
+    const user = await User.findOne({ spotifyId: spotifyId });
+    user.genres = genres;
+    user.profileSongs = profileSongs;
+    const updatedUser = await user.save();
+    res.status(200).json(updatedUser);
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(500).json({ message: err.message });
   }
 });
 
