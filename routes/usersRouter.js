@@ -88,6 +88,7 @@ router.put("/matches", async (req, res) => {
         return User.findOne({ spotifyId: matchedUser });
       })
     );
+    matchedUsers.reverse();
     res.json(matchedUsers);
   } catch (err) {
     res.status(500).json({ message: err.message });
