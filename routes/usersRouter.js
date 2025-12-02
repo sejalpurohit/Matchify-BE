@@ -23,16 +23,20 @@ router.put("/feed", async (req, res) => {
       return userObj;
     });
 
+    const self = await User.findOne({ spotifyId: userSpotifyId });
+
     const filteredUsers = users.filter((user) => {
       return (
         user.spotifyId !== userSpotifyId &&
-        !user.matches.includes(userSpotifyId) &&
-        !user.liked.includes(userSpotifyId) &&
-        !user.passed.includes(userSpotifyId)
+        !self.matches.includes(user.spotifyId) &&
+        !self.liked.includes(user.spotifyId) &&
+        !self.passed.includes(user.spotifyId)
       );
     });
 
     filteredUsers.sort((a, b) => b.compatibility - a.compatibility);
+
+    console.log(filteredUsers[0]);
 
     res.json(filteredUsers);
   } catch (err) {
@@ -87,7 +91,6 @@ router.put("/matches", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  console.log(req.body);
   const updateUser = await User.findOne({ spotifyId: req.body.spotifyId });
   if (updateUser) {
     updateUser.displayName = req.body.displayName;
