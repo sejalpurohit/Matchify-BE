@@ -17,6 +17,7 @@ const userSchema = new mongoose.Schema({
   matches: [String],
   liked: [String],
   passed: [String],
+  isBot: Boolean,
 });
 
 module.exports = mongoose.model("User", userSchema);

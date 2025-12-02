@@ -48,8 +48,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-8.dzcdn.net/stream/c-81aec320.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user002",
     displayName: "Sophie Kim",
@@ -96,8 +96,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-f.dzcdn.net/stream/c-f0a98b213.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user003",
     displayName: "Liam Foster",
@@ -144,8 +144,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-e.dzcdn.net/stream/c-e1223991.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user004",
     displayName: "Ava Martinez",
@@ -192,8 +192,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-6.dzcdn.net/stream/c-6a3cd98e.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user005",
     displayName: "Noah Bennett",
@@ -240,8 +240,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-e.dzcdn.net/stream/c-e998a112.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user006",
     displayName: "Chloe Rivers",
@@ -288,8 +288,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-e.dzcdn.net/stream/c-e1239813.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user007",
     displayName: "Lucas Reed",
@@ -336,8 +336,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-3.dzcdn.net/stream/c-3abc12aa.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user008",
     displayName: "Zara Patel",
@@ -384,8 +384,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-f.dzcdn.net/stream/c-f88c1ec2.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user009",
     displayName: "Ella Torres",
@@ -432,8 +432,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-3.dzcdn.net/stream/c-32341cdd.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user010",
     displayName: "Hannah Stone",
@@ -480,6 +480,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-8.dzcdn.net/stream/c-8bb123ad.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user011",
@@ -527,8 +528,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-f.dzcdn.net/stream/c-f139aa32.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user012",
     displayName: "Aiden Brooks",
@@ -575,8 +576,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-5ab1333c.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user013",
     displayName: "Maya Wilson",
@@ -623,8 +624,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-e.dzcdn.net/stream/c-e7782211.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user014",
     displayName: "Darius Hall",
@@ -671,8 +672,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-d.dzcdn.net/stream/c-dbb19c21.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user015",
     displayName: "Tariq Green",
@@ -719,8 +720,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-c.dzcdn.net/stream/c-c187af22.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user016",
     displayName: "Selena Brooks",
@@ -767,8 +768,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-c.dzcdn.net/stream/c-c12ab11f.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user017",
     displayName: "Marcus Boyd",
@@ -815,8 +816,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-5cc912eb.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user018",
     displayName: "Aaliyah Knight",
@@ -863,8 +864,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-c.dzcdn.net/stream/c-c29412ac.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user019",
     displayName: "Dante Wells",
@@ -911,8 +912,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-2.dzcdn.net/stream/c-219921cd.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user020",
     displayName: "Tiana Moore",
@@ -959,6 +960,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-f.dzcdn.net/stream/c-f88b11cd.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user021",
@@ -1012,8 +1014,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-e.dzcdn.net/stream/c-e11ac2cc.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user022",
     displayName: "Luna Mercer",
@@ -1060,8 +1062,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-e.dzcdn.net/stream/c-eab882cd.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user023",
     displayName: "Caleb Winters",
@@ -1108,8 +1110,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-f.dzcdn.net/stream/c-f11bcb12.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user024",
     displayName: "Aria Collins",
@@ -1156,8 +1158,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-2.dzcdn.net/stream/c-212bfaec.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user025",
     displayName: "Oliver Kane",
@@ -1204,8 +1206,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-a.dzcdn.net/stream/c-a239bca1.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user026",
     displayName: "Sierra Blake",
@@ -1252,8 +1254,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-a.dzcdn.net/stream/c-a217bb32.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user027",
     displayName: "Max Harper",
@@ -1300,8 +1302,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-e.dzcdn.net/stream/c-eaa219c1.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user028",
     displayName: "Nina Foster",
@@ -1348,8 +1350,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-f.dzcdn.net/stream/c-f9bb321a.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user029",
     displayName: "Riley Donovan",
@@ -1396,8 +1398,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-c.dzcdn.net/stream/c-c11a2bb1.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user030",
     displayName: "Hailey Quinn",
@@ -1444,6 +1446,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-e.dzcdn.net/stream/c-e119221d.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user031",
@@ -1491,8 +1494,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-9.dzcdn.net/stream/c-9d50dd16.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user032",
     displayName: "Kai Renner",
@@ -1539,8 +1542,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-6.dzcdn.net/stream/c-6f0b4a12.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user033",
     displayName: "Mila Santos",
@@ -1587,8 +1590,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-1.dzcdn.net/stream/c-1388ab4a.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user034",
     displayName: "Arjun Patel",
@@ -1635,8 +1638,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-3.dzcdn.net/stream/c-3bbb18ab.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user035",
     displayName: "Vera Collins",
@@ -1683,8 +1686,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-f.dzcdn.net/stream/c-f89213ad.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user036",
     displayName: "Leo Nakamura",
@@ -1731,8 +1734,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-7.dzcdn.net/stream/c-7a2df811.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user037",
     displayName: "Tara Lane",
@@ -1779,8 +1782,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-a.dzcdn.net/stream/c-aeb8a90c.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user038",
     displayName: "Nikolai Weber",
@@ -1827,8 +1830,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-0cf28599.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user039",
     displayName: "Selene Ward",
@@ -1875,8 +1878,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-d.dzcdn.net/stream/c-dab311cf.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user040",
     displayName: "Theo Briggs",
@@ -1923,6 +1926,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-b.dzcdn.net/stream/c-b7f89a81.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user041",
@@ -1970,8 +1974,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-5d417ad4.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user042",
     displayName: "Aaliyah Brooks",
@@ -2018,8 +2022,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-1.dzcdn.net/stream/c-1556f644.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user043",
     displayName: "Marcus Reed",
@@ -2066,8 +2070,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-d.dzcdn.net/stream/c-d650c319.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user044",
     displayName: "Nina Ellis",
@@ -2114,8 +2118,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-a.dzcdn.net/stream/c-a642d912.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user045",
     displayName: "Omar Jackson",
@@ -2162,8 +2166,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-1.dzcdn.net/stream/c-1028d8b0.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user046",
     displayName: "Diego Alvarez",
@@ -2210,8 +2214,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-d.dzcdn.net/stream/c-dc31ec3c.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user047",
     displayName: "Priya Shah",
@@ -2258,8 +2262,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-f.dzcdn.net/stream/c-f2a09c03.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user048",
     displayName: "Trevor King",
@@ -2306,8 +2310,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-b.dzcdn.net/stream/c-b03577ec.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user049",
     displayName: "Melanie Scott",
@@ -2354,8 +2358,8 @@ const UsersData = [
         previewUrl: "https://cdns-preview-4.dzcdn.net/stream/c-4a42cfb1.mp3",
       },
     ],
+    isBot: true,
   },
-
   {
     spotifyId: "user050",
     displayName: "Andre Carter",
@@ -2402,6 +2406,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-04c532fa.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user051",
@@ -2449,6 +2454,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user052",
@@ -2496,6 +2502,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user053",
@@ -2543,6 +2550,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user054",
@@ -2590,6 +2598,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user055",
@@ -2637,6 +2646,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user056",
@@ -2684,6 +2694,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user057",
@@ -2731,6 +2742,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user058",
@@ -2778,6 +2790,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user059",
@@ -2825,6 +2838,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-7.dzcdn.net/stream/c-72f3b5d1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user060",
@@ -2872,6 +2886,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user061",
@@ -2919,6 +2934,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user062",
@@ -2966,6 +2982,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user063",
@@ -3013,6 +3030,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user064",
@@ -3060,6 +3078,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user065",
@@ -3107,6 +3126,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user066",
@@ -3154,6 +3174,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user067",
@@ -3201,6 +3222,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user068",
@@ -3248,6 +3270,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user069",
@@ -3295,6 +3318,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user070",
@@ -3342,6 +3366,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user071",
@@ -3389,6 +3414,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user072",
@@ -3436,6 +3462,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user073",
@@ -3483,6 +3510,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user074",
@@ -3530,6 +3558,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user075",
@@ -3577,6 +3606,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user076",
@@ -3624,6 +3654,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user077",
@@ -3671,6 +3702,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user078",
@@ -3718,6 +3750,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user079",
@@ -3765,6 +3798,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user080",
@@ -3812,6 +3846,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user081",
@@ -3859,6 +3894,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user082",
@@ -3906,6 +3942,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user083",
@@ -3953,6 +3990,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user084",
@@ -4000,6 +4038,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user085",
@@ -4047,6 +4086,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user086",
@@ -4094,6 +4134,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user087",
@@ -4141,6 +4182,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user088",
@@ -4188,6 +4230,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user089",
@@ -4235,6 +4278,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user090",
@@ -4282,6 +4326,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user091",
@@ -4329,6 +4374,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user092",
@@ -4376,6 +4422,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user093",
@@ -4429,6 +4476,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user094",
@@ -4476,6 +4524,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user095",
@@ -4523,6 +4572,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user096",
@@ -4570,6 +4620,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user097",
@@ -4617,6 +4668,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user098",
@@ -4664,6 +4716,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user099",
@@ -4711,6 +4764,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-5.dzcdn.net/stream/c-53e4a2b1.mp3",
       },
     ],
+    isBot: true,
   },
   {
     spotifyId: "user100",
@@ -4758,7 +4812,7 @@ const UsersData = [
         previewUrl: "https://cdns-preview-0.dzcdn.net/stream/c-03d2b1e2.mp3",
       },
     ],
+    isBot: true,
   },
 ];
-
 module.exports = UsersData;

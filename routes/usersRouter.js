@@ -36,8 +36,6 @@ router.put("/feed", async (req, res) => {
 
     filteredUsers.sort((a, b) => b.compatibility - a.compatibility);
 
-    console.log(filteredUsers[0]);
-
     res.json(filteredUsers);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -52,7 +50,7 @@ router.patch("/matches", async (req, res) => {
   try {
     const user = await User.findOne({ spotifyId: userId });
     const other = await User.findOne({ spotifyId: otherId });
-    if (isLike) {
+    if (isLike && !other.isBot) {
       if (other.liked.includes(user.spotifyId)) {
         user.matches.push(other.spotifyId);
         other.matches.push(user.spotifyId);
@@ -62,6 +60,12 @@ router.patch("/matches", async (req, res) => {
       }
     } else if (isLike === false) {
       user.passed.push(other.spotifyId);
+    } else if (isLike && other.isBot) {
+      if (Math.random() < 0.5) {
+        user.matches.push(other.spotifyId);
+      } else {
+        user.liked.push(other.spotifyId);
+      }
     }
     const updatedUser = await user.save();
     const updatedOther = await other.save();
@@ -114,6 +118,7 @@ router.post("/", async (req, res) => {
       matches: req.body.matches,
       liked: req.body.liked,
       passed: req.body.passed,
+      isBot: false,
     });
 
     try {
