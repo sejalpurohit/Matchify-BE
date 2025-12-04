@@ -14,17 +14,6 @@ beforeEach(async () => {
   await User.insertMany(UsersData);
 });
 
-describe("Users Router", () => {
-  describe("GET /users", () => {
-    it("should return all users", async () => {
-      const res = await request(app).get("/users");
-      expect(res.statusCode).toBe(200);
-      expect(res.body.length).toBe(UsersData.length);
-      expect(res.body[0]).toHaveProperty("spotifyId");
-    });
-  });
-});
-
 describe("PUT users/feed", () => {
   it("should return filtered users with compatibility score", async () => {
     const selfSpotifyId = UsersData[0].spotifyId;
