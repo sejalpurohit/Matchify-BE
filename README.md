@@ -8,13 +8,44 @@ Matchify-BE is the backend service for the Matchify mobile app. It is a RESTful 
 - React Native (Web/Android/iOS)
 - NodeJS
 
-## Prerequisites
 
+## 📦 Prerequisites
+Install the following before running the project:
+
+- [Node.js](https://nodejs.org/en/download) 
+- [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+
+
+ ## ⚙️ Setup
 ### 1. Clone the repo
 ```bash
 git clone https://github.com/sejalpurohit/Matchify-BE.git
 cd Matchify-BE
 npm i
+```
+
+### 2. Create .env files
+
+Create a .env.local file and add the following:
+
+```
+DATABASE_URL="mongodb://localhost/users"
+```
+
+In order to connect to your local mongodb database when running a local server
+
+###  3. Seed Local Database
+
+To seed a local instance of the database run:
+
+```
+npm run seed
+```
+###  4. Start Local Server
+To start a local server run:
+
+```
+npm run dev
 ```
 ---
 
@@ -31,37 +62,6 @@ npm i
 - **Express.js** (web framework)  
 - **MongoDB** (database)
 - **React Native** (client — Web/Android/iOS)  
-
-## .env files
-
-Create a .env.local file and add the following:
-
-```
-DATABASE_URL="mongodb://localhost/users"
-```
-
-In order to connect to your local mongodb database when running a local server
-
-## Usage
-
-To seed a local instance of the database run:
-
-```
-npm run seed
-```
-
-To start a local server run:
-
-```
-npm run dev
-```
----
-
-## 📦 Prerequisites
-Install the following before running the project:
-
-- [Node.js](https://nodejs.org/en/download) 
-- [MongoDB Community Server](https://www.mongodb.com/try/download/community)
 
 ---
 

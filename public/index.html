@@ -13,7 +13,6 @@
       <h2>Endpoints</h2>
       <nav>
         <ul>
-          <li><a href="#get-users">GET /users</a></li>
           <li><a href="#put-feed">PUT /users/feed</a></li>
           <li><a href="#patch-matches">PATCH /users/matches</a></li>
           <li><a href="#put-matches">PUT /users/matches</a></li>
@@ -29,31 +28,9 @@
         <p class="subtitle">Local development endpoints for <code>http://localhost:3000</code></p>
       </header>
 
-      <section id="get-users" class="endpoint">
-        <h2>GET http://localhost:3000/users</h2>
-       <p>Retrieves a list of all user records stored in the database</p>
-        <h3>Method: GET</h3>
-        <h3>Endpoint:<code>/users</code></h3> 
-        <h3>Success Response : </h3>(200 OK)
-        <pre class="json">[
-  {
-    "_id": "67301c72ab12df001fe3ab55",
-    "name": "John Doe",
-    "email": "john@example.com",
-    "age": 28
-  },
-  {
-    "_id": "67301c72ab12df001fe3ab56",
-    "name": "Jane Smith",
-    "email": "jane@example.com",
-    "age": 31
-  }
-]</pre>
-      </section>
-
       <section id="put-feed" class="endpoint">
         <h2>PUT http://localhost:3000/users/feed</h2>
-        <p >Add user details with top 5 song from user's spotify feed</p>
+        <p >Retrieve a compatibility-sorted feed of recommended users for a given Spotify user.</p>
         <h3>Method: PUT</h3>
          <h3>Endpoint:<code>/feed</code></h3> 
         <h3>Request</h3>
@@ -82,7 +59,7 @@
 
       <section id="patch-matches" class="endpoint">
         <h2>PATCH http://localhost:3000/users/matches</h2>
-        <p >Register a like/disliked users and update matches</p>
+        <p >Register user's like/disliked</p>
           <h3>Method: PATCH</h3>
            <h3>Endpoint:<code>/users/matches</code></h3> 
              <h3>Request</h3>
@@ -93,11 +70,17 @@
 }</pre>
         <h3>Success Response : </h3>(200 OK)
         <pre class="json">{
-  "spotifyId": "user123",
-  "matches": ["user987"],
-  "liked": [],
-  "passed": []
-}
+    "spotifyId": "matchedUser1",
+    "displayName": "Alice",
+    "profileImage": "...",
+    "genres": [...],
+    "matches": [...],
+    "liked": [...],
+    "passed": [...],
+    "profileSongs": [ ... ],
+    "isBot": false
+  }
+
 </pre>
       </section>
 
@@ -129,7 +112,7 @@
 
       <section id="post-users" class="endpoint">
         <h2>POST http://localhost:3000/users</h2>
-        <p >Update an existing user</p>
+        <p >Update an existing user and add new user</p>
          <h3>Method: POST</h3>
         <h3>Endpoint:<code>/users</code></h3> 
           <h3>Request</h3>
@@ -142,12 +125,17 @@
 }</pre>
         <h3>Success Response : </h3>(200 OK)
         <pre class="json">{
-  "spotifyId": "user123",
-  "displayName": "John",
-  "email": "john@gmail.com",
-  "profileImage": "https://image.jpg",
-  "genres": ["pop", "rock"]
-}
+    "spotifyId": "matchedUser1",
+    "displayName": "Alice",
+    "profileImage": "...",
+    "genres": [...],
+    "matches": [...],
+    "liked": [...],
+    "passed": [...],
+    "profileSongs": [ ... ],
+    "isBot": false
+  }
+
 </pre>
       </section>
 
@@ -166,10 +154,17 @@
 }</pre>
         <h3>Success Response : </h3>(200 OK)
         <pre class="json">{
-  "spotifyId": "user123",
-  "genres": ["pop", "rnb"],
-  "profileSongs": [...]
-}
+    "spotifyId": "matchedUser1",
+    "displayName": "Alice",
+    "profileImage": "...",
+    "genres": [...],
+    "matches": [...],
+    "liked": [...],
+    "passed": [...],
+    "profileSongs": [ ... ],
+    "isBot": false
+  }
+
 </pre>
       </section>
 
