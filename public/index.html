@@ -1,0 +1,178 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Users API — Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Endpoints</h2>
+      <nav>
+        <ul>
+          <li><a href="#put-feed">PUT /users/feed</a></li>
+          <li><a href="#patch-matches">PATCH /users/matches</a></li>
+          <li><a href="#put-matches">PUT /users/matches</a></li>
+          <li><a href="#post-users">POST /users</a></li>
+          <li><a href="#patch-users">PATCH /users</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="site-header">
+        <h1>Users API</h1>
+        <p class="subtitle">Local development endpoints for <code>http://localhost:3000</code></p>
+      </header>
+
+      <section id="put-feed" class="endpoint">
+        <h2>PUT http://localhost:3000/users/feed</h2>
+        <p >Retrieve a compatibility-sorted feed of recommended users for a given Spotify user.</p>
+        <h3>Method: PUT</h3>
+         <h3>Endpoint:<code>/feed</code></h3> 
+        <h3>Request</h3>
+        <pre class="json">{
+  "spotifyId": "user123",
+  "genres": ["pop", "rock"]
+}</pre>
+        <h3>Success Response : </h3>(200 OK)
+        <pre class="json">[
+  {
+    "_id": "67301c72ab12df001fe3ab88",
+    "spotifyId": "otherUser1",
+    "displayName": "Alice",
+    "profileImage": "https://image.jpg",
+    "profileSongs": [ ... ],
+    "genres": [ "pop", "rnb" ],
+    "matches": [],
+    "liked": [],
+    "passed": [],
+    "isBot": false,
+    "compatibility": 0.72
+  }
+]
+</pre>
+      </section>
+
+      <section id="patch-matches" class="endpoint">
+        <h2>PATCH http://localhost:3000/users/matches</h2>
+        <p >Register user's like/disliked</p>
+          <h3>Method: PATCH</h3>
+           <h3>Endpoint:<code>/users/matches</code></h3> 
+             <h3>Request</h3>
+        <pre class="json">{
+  "spotifyId": "user123",
+  "otherSpotifyId": "user987",
+  "isLike": true
+}</pre>
+        <h3>Success Response : </h3>(200 OK)
+        <pre class="json">{
+    "spotifyId": "matchedUser1",
+    "displayName": "Alice",
+    "profileImage": "...",
+    "genres": [...],
+    "matches": [...],
+    "liked": [...],
+    "passed": [...],
+    "profileSongs": [ ... ],
+    "isBot": false
+  }
+
+</pre>
+      </section>
+
+      <section id="put-matches" class="endpoint">
+        <h2>PUT http://localhost:3000/users/matches</h2>
+         <p>Return full profiles of matched users.</p>
+        <h3>Method: PUT</h3>
+        <h3>Endpoint:<code>/users/matches</code></h3> 
+          <h3>Request</h3>
+        <pre class="json">{
+  "spotifyId": "user123"
+}</pre>
+        <h3>Success Response : </h3>(200 OK)
+        <pre class="json">[
+  {
+    "spotifyId": "matchedUser1",
+    "displayName": "Alice",
+    "profileImage": "...",
+    "genres": [...],
+    "matches": [...],
+    "liked": [...],
+    "passed": [...],
+    "profileSongs": [ ... ],
+    "isBot": false
+  }
+]
+</pre>
+      </section>
+
+      <section id="post-users" class="endpoint">
+        <h2>POST http://localhost:3000/users</h2>
+        <p >Update an existing user and add new user</p>
+         <h3>Method: POST</h3>
+        <h3>Endpoint:<code>/users</code></h3> 
+          <h3>Request</h3>
+        <pre class="json">{
+  "spotifyId": "user123",
+  "displayName": "John",
+  "email": "john@gmail.com",
+  "profileImage": "https://image.jpg",
+  "genres": ["pop", "rock"]
+}</pre>
+        <h3>Success Response : </h3>(200 OK)
+        <pre class="json">{
+    "spotifyId": "matchedUser1",
+    "displayName": "Alice",
+    "profileImage": "...",
+    "genres": [...],
+    "matches": [...],
+    "liked": [...],
+    "passed": [...],
+    "profileSongs": [ ... ],
+    "isBot": false
+  }
+
+</pre>
+      </section>
+
+     
+
+      <section id="patch-users" class="endpoint">
+        <h2>PATCH /users</h2>
+        <p >Update genres and profile songs.</p>
+        <h3>Method: PATCH</h3>
+        <h3>Endpoint:<code>/users</code></h3> 
+          <h3>Request</h3>
+        <pre class="json">{
+  "spotifyId": "user123",
+  "genres": ["pop", "rnb"],
+  "profileSongs": [...]
+}</pre>
+        <h3>Success Response : </h3>(200 OK)
+        <pre class="json">{
+    "spotifyId": "matchedUser1",
+    "displayName": "Alice",
+    "profileImage": "...",
+    "genres": [...],
+    "matches": [...],
+    "liked": [...],
+    "passed": [...],
+    "profileSongs": [ ... ],
+    "isBot": false
+  }
+
+</pre>
+      </section>
+
+      <footer>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
+
+
