@@ -9,7 +9,8 @@ require("dotenv").config({ path: `${__dirname}/.env.${ENV}` });
 
 const cors = require("cors");
 app.use(cors());
-
+app.use(express.static('public'))
+console.log("DATABASE_URL:", process.env.DATABASE_URL);
 mongoose.connect(process.env.DATABASE_URL);
 const db = mongoose.connection;
 db.on("error", (err) => {
@@ -22,5 +23,8 @@ db.once("open", () => {
 app.use(express.json());
 
 app.use("/users", usersRouter);
+// app.get('*', (req, res) => {
+//   res.sendFile(__dirname + '/public/index.html');
+// });
 
 module.exports = { app, db };
