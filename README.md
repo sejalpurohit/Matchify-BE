@@ -65,3 +65,6 @@ npm run dev
 
 ---
 
+## 🖥️ Frontend Details
+
+Repo Link: [https://github.com/sejalpurohit/Matchify-BE](https://github.com/LeapimusMaximus/Matchify-FE)
